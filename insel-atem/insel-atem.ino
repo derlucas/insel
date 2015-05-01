@@ -25,8 +25,8 @@ void setKeyer(uint8_t program, bool onoff) {
 
 void setupKeyer() {
   AtemSwitcher.setKeyerType(0, 0, 1);
-  AtemSwitcher.setKeyChromaHue(0, 0, 1825);
-  AtemSwitcher.setKeyChromaGain(0, 0, 1000);
+  AtemSwitcher.setKeyChromaHue(0, 0, 1325);
+  AtemSwitcher.setKeyChromaGain(0, 0, 886);
   AtemSwitcher.setKeyChromaYSuppress(0, 0, 1000);
   AtemSwitcher.setKeyChromaLift(0, 0, 0);
   AtemSwitcher.setKeyChromaNarrow(0, 0, false);
