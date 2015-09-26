@@ -4,8 +4,8 @@
 #define T2        A1
 #define T1LED      6
 #define T2LED      7
-#define LEFT      A2
-#define RIGHT     A3
+#define LEFT      A3
+#define RIGHT     A2
 #define UP        A4
 #define DOWN      A5 
 #define K2         2
@@ -15,14 +15,14 @@
 #define PWM1       9
 #define PWM2      10      
 
-#define angle_min   10
-#define angle_max  170 
+#define angle_min    0
+#define angle_max  180 
 #define angle_mid   90
 
 Servo servo1;
 Servo servo2;
 
-byte servo1_angle, servo2_angle;
+int servo1_angle, servo2_angle;
 int motorActive = 0;
 
 void setup() {
@@ -41,8 +41,8 @@ void setup() {
 
   Serial.begin(9600);  
 
-  servo1.attach(PWM1);
-  servo2.attach(PWM2);
+  servo1.attach(PWM1, 500, 2500);
+  servo2.attach(PWM2, 500, 2500);
   servo1.write(angle_mid);
   servo2.write(angle_mid);
   
